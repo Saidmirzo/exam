@@ -3,33 +3,17 @@ import 'package:flutter/material.dart';
 abstract class AppColors {
   const AppColors._();
 
-  static const Color blue = Color(0xff3461FD);
-  static const Color unActText = Color(0xff94A1C5);
-  static const Color green = Color(0xff34B529);
-  static const Color textfield = Color(0xff415077);
+  // static const Color blue = Color(0xff3461FD);
+  static const Color green = Color(0xff27AE60);
+  static const  Color red = Color(0xffEB5757);
+  static const Color black = Color(0xff000000);
+  static const Color white = Color(0xffffffff);
+  static const Color grey3 = Color(0xff828282);
+  static const Color black1E = Color(0xff1E1E1E);
+  static const Color ellipse = Color(0xffEDF2F9);
+  static const Color cardColor = Color(0xffF9FAFF);
+  static const Color blue = Color(0xff2F80ED);
+  static const Color whitef8 = Color(0xffF8F9FF);
 
-  static Color lightBgClr = const Color(0xFFF1F2F3);
-  static Color actionsClmnnClr = const Color(0xFF4B5EFC);
-  static Color red = Colors.red;
-  static Color indigo = Colors.indigo;
-  static Color lastAction = const Color(0xFF4E505F);
-  static Color black = const Color(0xff000000);
-  static Color white = const Color(0xffffffff);
-  static Color divider = const Color(0xffEAEEF2);
-  static Color opacity44 = const Color(0xff081C2C).withOpacity(.44);
-
-
-  static Color appBarColor = const Color(0xff163043);
-
-  static Color neutral50 = const Color(0xffDDE2E8);
-  static Color neutral100 = const Color(0xffB3C2CE);
-  static Color neutral200 = const Color(0xff8EA3B3);
-  static Color neutral300 = const Color(0xff6E8597);
-  static Color neutral500 = const Color(0xff3A566A);
-  static Color neutral600 = const Color(0xff1F3C51);
-  static Color neutral700 = const Color(0xff163043);
-  static Color neutral800 = const Color(0xff0F2637);
-  static Color neutral900 = const Color(0xff081C2C);
-
-  static Color primary400 = const Color(0xff57B77D);
+  static const List<Color> wall = [Color(0xffF0F3F9), Color(0xffDCE9F8)];
 }

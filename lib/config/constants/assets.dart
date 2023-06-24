@@ -18,36 +18,25 @@ class _Icons extends _AssetsHolder {
   const _Icons() : super('assets/icons');
 
   // String get logo => "$basePath/logo.svg";
-  String get google => "$basePath/google.svg";
+  String get premium => "$basePath/premium.svg";
 
-  String get group => "$basePath/group_icon.svg";
+  String get settings => "$basePath/settings.svg";
 
-  String get send => "$basePath/send_icon.svg";
+  String get another => "$basePath/anothers_ic.svg";
 
-  String get paperClip => "$basePath/paper_clip_icon.svg";
+  String get car => "$basePath/car_ic.svg";
 
-  String get logout => "$basePath/logout.svg";
+  String get exam => "$basePath/exam.svg";
 
-  String get addPhoto => "$basePath/add_photo.svg";
+  String get example => "$basePath/example.svg";
 
-  String get user => "$basePath/user.svg";
+  String get reyting => "$basePath/reyting_ic.svg";
 
-  String get check => "$basePath/check_ic.svg";
-
-  String get search => "$basePath/search.svg";
-
+  String get stop => "$basePath/stop_ic.svg";
 }
 
 class _Images extends _AssetsHolder {
   const _Images() : super('assets/images');
 
-  String get user1 => '$basePath/user1.jpg';
-
-  String get chatBg => '$basePath/chat_bg_img.png';
-
-  String get logo => '$basePath/logo.svg';
-
-  String get defUserimaage => '$basePath/def_user_img.png';
-
-  String get uploadingUserimage => '$basePath/uploading_user_img.png';
+  String get avatar1 => '$basePath/avatar1.png';
 }
