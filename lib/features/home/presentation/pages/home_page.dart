@@ -1,7 +1,7 @@
+import 'dart:ui';
+
 import 'package:exam/config/constants/all_constants.dart';
-import 'package:exam/config/constants/app_colors.dart';
-import 'package:exam/config/constants/app_text_styles.dart';
-import 'package:exam/config/constants/assets.dart';
+import 'package:exam/features/home/presentation/widgets/custom_icon_conatiner.dart';
 import 'package:exam/features/home/presentation/widgets/custom_progress_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 22.w).copyWith(top: 38.h),
+          padding: EdgeInsets.symmetric(horizontal: 23.w).copyWith(top: 38.h),
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: AppColors.wall,
@@ -134,7 +134,8 @@ class HomePage extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return HomeMenuItem(
                       name: listMenuNames[index],
-                      image: listMenuIcons[index],
+                      icon: listMenuIcons[index],
+                      color: listMenuColors[index],
                     );
                   },
                 ),
@@ -150,11 +151,13 @@ class HomePage extends StatelessWidget {
 class HomeMenuItem extends StatelessWidget {
   const HomeMenuItem({
     super.key,
-    required this.image,
+    required this.icon,
     required this.name,
+    required this.color,
   });
-  final String image;
+  final String icon;
   final String name;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -169,17 +172,8 @@ class HomeMenuItem extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            height: 54.h,
-            width: 54.h,
-            margin: EdgeInsets.only(bottom: 18.h),
-            alignment: Alignment.bottomLeft,
-            decoration: BoxDecoration(
-              color: AppColors.green.withOpacity(.12),
-              borderRadius: BorderRadius.circular(7.r),
-            ),
-            child: SvgPicture.asset(image),
-          ),
+          CustomIconContainer(icon: icon, color: color),
+          SizedBox(height: 18.h),
           Text(
             name,
             style: AppTextStyles.body14w5.copyWith(

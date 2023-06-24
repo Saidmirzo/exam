@@ -33,6 +33,17 @@ class _Icons extends _AssetsHolder {
   String get reyting => "$basePath/reyting_ic.svg";
 
   String get stop => "$basePath/stop_ic.svg";
+
+  String get arrowLeft => "$basePath/arrow_left.svg";
+
+
+  String get way => "$basePath/way_ic.svg";
+
+  String get heart => "$basePath/heart_ic.svg";
+  
+  String get engine => "$basePath/engine_ic.svg";
+
+
 }
 
 class _Images extends _AssetsHolder {
