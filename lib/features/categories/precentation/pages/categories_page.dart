@@ -1,11 +1,10 @@
-import 'package:exam/config/constants/app_text_styles.dart';
 import 'package:exam/config/constants/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../config/constants/app_colors.dart';
-import '../../../home/presentation/widgets/custom_icon_conatiner.dart';
+import '../../../home/presentation/widgets/custom_app_bar.dart';
+import '../widgets/category_item.dart';
 
 class CategoriesPage extends StatelessWidget {
   const CategoriesPage({super.key});
@@ -13,15 +12,9 @@ class CategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: AppColors.wall[0],
-        centerTitle: true,
-        leading: IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset(Assets.icons.arrowLeft),
-        ),
-        title: Text('Bo’limlar bo’yicha', style: AppTextStyles.body14w5),
+      appBar: CustomAppBar(
+        title: 'Bo’limlar bo’yicha',
+        onBack: () =>Navigator.pop(context),
       ),
       body: SafeArea(
           child: Container(
@@ -67,56 +60,4 @@ class CategoriesPage extends StatelessWidget {
   }
 }
 
-class CategoryItem extends StatelessWidget {
-  const CategoryItem({
-    super.key,
-    required this.name,
-    required this.count,
-    required this.icon,
-    required this.iconBgColor,
-    required this.onTap,
-  });
-  final String name;
-  final int count;
-  final String icon;
-  final Color iconBgColor;
-  final Function() onTap;
 
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        height: 70.h,
-        margin: EdgeInsets.symmetric(vertical: 5.h),
-        padding: EdgeInsets.only(left: 8.w, right: 20.w),
-        decoration: BoxDecoration(
-          color: AppColors.whitef8,
-          borderRadius: BorderRadius.circular(10.r),
-        ),
-        child: Row(
-          children: [
-            CustomIconContainer(
-              color: iconBgColor,
-              icon: icon,
-            ),
-            SizedBox(width: 18.w),
-            Text(
-              name,
-              style: AppTextStyles.body14w5,
-            ),
-            const Spacer(),
-            Text(
-              count.toString(),
-              style: AppTextStyles.body14w6.copyWith(
-                color: AppColors.blue,
-                decoration: TextDecoration.underline,
-                decorationColor: AppColors.blue,
-              ),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}

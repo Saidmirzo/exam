@@ -1,11 +1,12 @@
-import 'dart:ui';
-
 import 'package:exam/config/constants/all_constants.dart';
-import 'package:exam/features/home/presentation/widgets/custom_icon_conatiner.dart';
+import 'package:exam/config/routes/routes.dart';
 import 'package:exam/features/home/presentation/widgets/custom_progress_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../widgets/home_menu_item.dart';
+import '../widgets/wall_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,17 +15,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 23.w).copyWith(top: 38.h),
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: AppColors.wall,
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
+        child: WallWidget(
           child: ListView(
-            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -136,6 +128,14 @@ class HomePage extends StatelessWidget {
                       name: listMenuNames[index],
                       icon: listMenuIcons[index],
                       color: listMenuColors[index],
+                      ontap: () {
+                        if (index == 2) {
+                          Navigator.pushNamed(context, Routes.categoriesPage);
+                        }
+                        if (index == 5) {
+                          Navigator.pushNamed(context, Routes.othersPage);
+                        }
+                      },
                     );
                   },
                 ),
@@ -143,44 +143,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class HomeMenuItem extends StatelessWidget {
-  const HomeMenuItem({
-    super.key,
-    required this.icon,
-    required this.name,
-    required this.color,
-  });
-  final String icon;
-  final String name;
-  final Color color;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 156.h,
-      width: 165.w,
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        color: AppColors.whitef8,
-        borderRadius: BorderRadius.circular(10.r),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CustomIconContainer(icon: icon, color: color),
-          SizedBox(height: 18.h),
-          Text(
-            name,
-            style: AppTextStyles.body14w5.copyWith(
-              color: AppColors.black1E,
-            ),
-          ),
-        ],
       ),
     );
   }

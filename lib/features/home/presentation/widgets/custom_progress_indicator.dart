@@ -18,7 +18,7 @@ class CustomProgressIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircularSeekBar(
-      width: 75.h,
+      width: 80.h,
       height: 70.h,
       progress: value.toDouble(),
       barWidth: 5,

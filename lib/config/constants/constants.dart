@@ -6,7 +6,7 @@ import 'package:exam/config/constants/assets.dart';
 const List<String> listMenuNames = [
   "Imtihon",
   "Namunalar",
-  "Namunalar",
+  "Bo’limlar",
   "Xatolar",
   "Top reyting",
   "Boshqalar",
