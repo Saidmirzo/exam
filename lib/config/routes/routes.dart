@@ -1,4 +1,6 @@
 import 'package:exam/features/categories/precentation/pages/categories_page.dart';
+import 'package:exam/features/news/presentation/pages/news_more_info_page.dart';
+import 'package:exam/features/news/presentation/pages/news_page.dart';
 import 'package:exam/features/others/presentation/pages/others_page.dart';
 import 'package:exam/features/ticket/presentation/pages/ticket_page.dart';
 import 'package:flutter/material.dart';
@@ -6,11 +8,12 @@ import 'package:flutter/material.dart';
 import '../../features/home/presentation/pages/home_page.dart';
 
 class Routes {
-  
-  static const homePage = '/homePage';
+  static const homePage = '/';
   static const categoriesPage = '/categoriesPage';
   static const othersPage = '/othersPage';
-  static const ticketPage = '/';
+  static const ticketPage = '/ticketPage';
+  static const newsPage = '/newsPage';
+  static const newsMoreInfoPage = '/newsMoreInfoPage';
 
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
@@ -18,26 +21,35 @@ class Routes {
           routeSettings.arguments as Map<String, dynamic>?;
       args ?? <String, dynamic>{};
       switch (routeSettings.name) {
-       
         case homePage:
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const HomePage(),
           );
-       case categoriesPage:
+        case categoriesPage:
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const CategoriesPage(),
           );
-       case othersPage:
+        case othersPage:
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const OthersPage(),
           );
-       case ticketPage:
+        case ticketPage:
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const TicketPage(),
+          );
+        case newsPage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const NewsPage(),
+          );
+        case newsMoreInfoPage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => NewsMoreInfoPage(newsModel: args!["newsModel"]),
           );
         default:
           return MaterialPageRoute(

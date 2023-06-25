@@ -53,12 +53,21 @@ class _Icons extends _AssetsHolder {
   String get telegram => "$basePath/telegram_ic.svg";
 
   String get time => "$basePath/time_ic.svg";
+
   String get arrowDown => "$basePath/arrow_down_ic.svg";
+
+  String get doubleTick => "$basePath/double_tick_ic.svg";
+
+  String get eye => "$basePath/eye_ic.svg";
+  
 }
 
 class _Images extends _AssetsHolder {
   const _Images() : super('assets/images');
 
   String get avatar1 => '$basePath/avatar1.png';
+  
   String get testPic => '$basePath/test_pic.svg';
+
+  String get news => '$basePath/news_img.png';
 }
