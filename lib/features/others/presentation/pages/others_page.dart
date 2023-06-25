@@ -15,9 +15,8 @@ class OthersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         title: 'Boshqalar',
-        onBack: () => Navigator.pop(context),
       ),
       body: WallWidget(
         padding: EdgeInsets.symmetric(horizontal: 23.w).copyWith(top: 10.h),
@@ -36,7 +35,7 @@ class OthersPage extends StatelessWidget {
               count: 1,
               icon: Assets.icons.statistics,
               iconBgColor: AppColors.blue,
-              onTap: () {},
+              onTap: () => Navigator.pushNamed(context, Routes.statisticsPage),
               traling: const SizedBox.shrink(),
             ),
             CategoryItem(

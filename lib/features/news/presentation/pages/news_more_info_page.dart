@@ -12,9 +12,8 @@ class NewsMoreInfoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         title: "Yangiliklar",
-        onBack: () => Navigator.pop(context),
       ),
       body: WallWidget(
         padding: EdgeInsets.symmetric(horizontal: 23.w),

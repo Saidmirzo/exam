@@ -2,6 +2,7 @@ import 'package:exam/features/categories/precentation/pages/categories_page.dart
 import 'package:exam/features/news/presentation/pages/news_more_info_page.dart';
 import 'package:exam/features/news/presentation/pages/news_page.dart';
 import 'package:exam/features/others/presentation/pages/others_page.dart';
+import 'package:exam/features/statistics/presentation/pages/statistics_page.dart';
 import 'package:exam/features/ticket/presentation/pages/ticket_page.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class Routes {
   static const ticketPage = '/ticketPage';
   static const newsPage = '/newsPage';
   static const newsMoreInfoPage = '/newsMoreInfoPage';
+  static const statisticsPage = '/statisticsPage';
 
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
@@ -50,6 +52,11 @@ class Routes {
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => NewsMoreInfoPage(newsModel: args!["newsModel"]),
+          );
+          case statisticsPage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const StatisticsPage(),
           );
         default:
           return MaterialPageRoute(

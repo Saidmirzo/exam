@@ -1,4 +1,5 @@
 import 'package:exam/config/constants/assets.dart';
+import 'package:exam/config/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,9 +13,8 @@ class CategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         title: 'Bo’limlar bo’yicha',
-        onBack: () =>Navigator.pop(context),
       ),
       body: SafeArea(
           child: Container(
@@ -31,21 +31,21 @@ class CategoriesPage extends StatelessWidget {
             Column(
               children: [
                 CategoryItem(
-                  onTap: () {},
+                  onTap: () => Navigator.pushNamed(context, Routes.ticketPage),
                   name: 'Yo’l harakati qoidalari',
                   count: 1131,
                   icon: Assets.icons.way,
                   iconBgColor: AppColors.green,
                 ),
                 CategoryItem(
-                  onTap: () {},
+                  onTap: () => Navigator.pushNamed(context, Routes.ticketPage),
                   name: 'Tibbiy yordam',
                   count: 400,
                   icon: Assets.icons.heart,
                   iconBgColor: AppColors.red,
                 ),
                 CategoryItem(
-                  onTap: () {},
+                  onTap: () => Navigator.pushNamed(context, Routes.ticketPage),
                   name: 'Texnik yordam',
                   count: 340,
                   icon: Assets.icons.engine,
@@ -59,5 +59,3 @@ class CategoriesPage extends StatelessWidget {
     );
   }
 }
-
-

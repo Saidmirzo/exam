@@ -19,7 +19,6 @@ class TicketPage extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         title: 'Namunalar',
-        onBack: () {},
         traling: Container(
           height: 28.h,
           width: 77.w,

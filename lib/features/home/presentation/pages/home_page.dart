@@ -1,10 +1,10 @@
 import 'package:exam/config/constants/all_constants.dart';
 import 'package:exam/config/routes/routes.dart';
-import 'package:exam/features/home/presentation/widgets/custom_progress_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../statistics/presentation/widgets/statistics_widget.dart';
 import '../widgets/home_menu_item.dart';
 import '../widgets/wall_widget.dart';
 
@@ -84,34 +84,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                height: 120.h,
-                // width: double.maxFinite,
-                decoration: BoxDecoration(
-                  color: AppColors.cardColor,
-                  borderRadius: BorderRadius.circular(10.r),
-                ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    CustomProgressIndicator(
-                      color: AppColors.blue,
-                      value: 89,
-                      name: 'Umumiy',
-                    ),
-                    CustomProgressIndicator(
-                      color: AppColors.green,
-                      value: 63,
-                      name: 'Muofaqiyatli',
-                    ),
-                    CustomProgressIndicator(
-                      color: AppColors.red,
-                      value: 26,
-                      name: 'Muofaqiyatsiz',
-                    ),
-                  ],
-                ),
-              ),
+              const StatisticsWidget(),
               Container(
                 height: 550.h,
                 margin: EdgeInsets.only(top: 16.h),
@@ -147,3 +120,5 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+

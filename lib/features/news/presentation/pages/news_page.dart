@@ -16,7 +16,6 @@ class NewsPage extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         title: 'Yangiliklar',
-        onBack: () => Navigator.pop(context),
         traling: Padding(
           padding: EdgeInsets.symmetric(horizontal: 23.w),
           child: SvgPicture.asset(

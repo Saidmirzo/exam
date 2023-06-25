@@ -2,6 +2,8 @@ import 'package:exam/config/constants/assets.dart';
 import 'package:exam/features/news/data/models/news_model.dart';
 import 'package:exam/features/ticket/data/models/quetion_model.dart';
 
+import '../../features/statistics/presentation/widgets/custom_line_chart.dart';
+
 List<QuetionModel> listQuetions = [
   QuetionModel(
     listAnswers: [
@@ -15,16 +17,16 @@ List<QuetionModel> listQuetions = [
 ];
 
 List<NewsModel> listNews = List.generate(
-    10,
-    (index) => NewsModel(
-          title:
-              'Vazirlar Mahkamasining 3-apreldagi 140-sonli qaroriga binoan, Yoʻl harakati qoidalariga oʻzgarish kiritildi',
-          time: '7 Aprel 2023',
-          views: 340,
-          isNew: index % 2 == 0,
-          image: Assets.images.news,
-          describe:
-              '''“Yo‘l harakati xavfsizligi to‘g‘risida”gi O‘zbekiston Respublikasi Qonunining ijrosini ta’minlash, shuningdek, 1968-yildagi Yo‘l harakati to‘g‘risidagi Vena Konvensiyasi talablari hamda ilg‘or xorijiy tajribaga muvofiq Yo‘l harakati qoidalarini yanada takomillashtirish, yo‘l-transport hodisalarining oldini olish, yo‘l harakati xavfsizligini nazorat qilish va samaradorligini oshirish maqsadida Vazirlar Mahkamasi qaror qiladi:
+  10,
+  (index) => NewsModel(
+    title:
+        'Vazirlar Mahkamasining 3-apreldagi 140-sonli qaroriga binoan, Yoʻl harakati qoidalariga oʻzgarish kiritildi',
+    time: '7 Aprel 2023',
+    views: 340,
+    isNew: index % 2 == 0,
+    image: Assets.images.news,
+    describe:
+        '''“Yo‘l harakati xavfsizligi to‘g‘risida”gi O‘zbekiston Respublikasi Qonunining ijrosini ta’minlash, shuningdek, 1968-yildagi Yo‘l harakati to‘g‘risidagi Vena Konvensiyasi talablari hamda ilg‘or xorijiy tajribaga muvofiq Yo‘l harakati qoidalarini yanada takomillashtirish, yo‘l-transport hodisalarining oldini olish, yo‘l harakati xavfsizligini nazorat qilish va samaradorligini oshirish maqsadida Vazirlar Mahkamasi qaror qiladi:
 1. Shunday tartib o‘rnatilsinki, unga muvofiq:
 a) aholi punktlarida transport vositalarining tezligini soatiga 70 kilometrdan, maktab va maktabgacha ta’lim tashkilotlari atrofidagi yo‘llarda 300 metrgacha bo‘lgan masofada 30 kilometrdan, turar joy dahalari va yondosh hududlarda (uy-joy binolari orasidagi yer uchastkasida) esa soatiga 20 kilometrdan oshirmasdan harakatlanishga ruxsat etiladi.
 Bunda O‘zbekiston Respublikasi Prezidentining “Avtomobil yo‘llarida inson xavfsizligini ishonchli ta’minlash va o‘lim holatlarini keskin kamaytirish chora-tadbirlari to‘g‘risida” 2022-yil 4-apreldagi PQ-190-son qarori bilan tashkil etilgan Yo‘l harakati xavfsizligini ta’minlash sohasidagi respublika komissiyasining qarori asosida Toshkent va Nukus shaharlari hamda viloyatlar markazlaridagi yo‘l harakati qatnovi yuqori bo‘lgan va aholi gavjum hududlarda transport vositalari harakatlanishining yuqori tezligi soatiga 60 kilometr etib belgilanishi mumkin;
@@ -41,4 +43,33 @@ manfaatdor vazirlik va idoralar bilan birgalikda o‘zlari qabul qilgan normativ
 4. O‘zbekiston Respublikasi Hukumatining 2-ilovaga muvofiq ayrim qarorlari 2022-yil 1-maydan boshlab o‘z kuchini yo‘qotgan deb hisoblansin.
 5. Mazkur qarorning bajarilishini nazorat qilish O‘zbekiston Respublikasi ichki ishlar vaziri P.R. Bobojonov zimmasiga yuklansin.
 O‘zbekiston Respublikasining Bosh vaziri A. ARIPOV''',
-        ));
+  ),
+);
+
+List<Coordinate> listCoordinate = [
+  Coordinate(0, 55),
+  Coordinate(4, 46),
+  Coordinate(11, 45),
+  Coordinate(13, 33),
+  Coordinate(17, 28),
+  Coordinate(24, 44),
+  Coordinate(29, 40),
+  Coordinate(33, 43),
+  Coordinate(38, 38),
+  Coordinate(41, 47),
+  Coordinate(45, 48),
+  Coordinate(48, 67),
+  Coordinate(52, 71),
+  Coordinate(58, 30),
+  Coordinate(61, 36),
+  Coordinate(64, 31),
+  Coordinate(67, 68),
+  Coordinate(70, 68),
+  Coordinate(72, 45),
+  Coordinate(75, 49),
+  Coordinate(77, 40),
+  Coordinate(80, 45),
+  Coordinate(81, 21),
+  Coordinate(84, 40),
+  Coordinate(87, 40),
+];
