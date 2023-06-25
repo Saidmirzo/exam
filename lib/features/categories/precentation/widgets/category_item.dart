@@ -8,13 +8,13 @@ class CategoryItem extends StatelessWidget {
   const CategoryItem({
     super.key,
     required this.name,
-    required this.count,
+     this.count,
     required this.icon,
     required this.iconBgColor,
     required this.onTap, this.traling,
   });
   final String name;
-  final int count;
+  final int? count;
   final String icon;
   final Color iconBgColor;
   final Function() onTap;
@@ -44,18 +44,27 @@ class CategoryItem extends StatelessWidget {
               style: AppTextStyles.body14w5,
             ),
             const Spacer(),
-            traling ??
-                Text(
+            switcTtraling(),
+          ],
+        ),
+      ),
+    );
+  }
+  Widget switcTtraling(){
+    if(traling!=null){
+      return traling??const SizedBox.shrink();
+    }else
+    if(count!=null){
+      return Text(
                   count.toString(),
                   style: AppTextStyles.body14w6.copyWith(
                     color: AppColors.blue,
                     decoration: TextDecoration.underline,
                     decorationColor: AppColors.blue,
                   ),
-                )
-          ],
-        ),
-      ),
-    );
+                );
+    }else{
+      return const SizedBox.shrink();
+    }
   }
 }

@@ -73,3 +73,12 @@ List<Coordinate> listCoordinate = [
   Coordinate(84, 40),
   Coordinate(87, 40),
 ];
+
+List<String> listRoads = [
+  Assets.images.sign1,
+  Assets.images.sign2,
+  Assets.images.sign3,
+  Assets.images.sign4,
+  Assets.images.sign5,
+  Assets.images.sign6,
+];
