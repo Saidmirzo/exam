@@ -1,4 +1,5 @@
 import 'package:exam/config/constants/assets.dart';
+import 'package:exam/features/fines/data/models/fines_model.dart';
 import 'package:exam/features/news/data/models/news_model.dart';
 import 'package:exam/features/ticket/data/models/quetion_model.dart';
 
@@ -81,4 +82,18 @@ List<String> listRoads = [
   Assets.images.sign4,
   Assets.images.sign5,
   Assets.images.sign6,
+];
+List<FinesModel> listFines = [
+  FinesModel(
+    number: 125,
+    info:
+        '''Haydovchilarning transport vositalarini boshgarish va yo'lovchilar tashishda xavfsizlik kamaridan foydalanish qoidalariga, xuddi shuningdek mototsikl va mopedlar haydovchilarining motoshlemlardan foydalanish qoidalariga rioya etmasligi .''',
+    cost: 135000,
+  ),
+  FinesModel(
+    number: 125,
+    info:
+        '''Haydovchilarning belgilangan tartibda ro'yxatdan o'tkazilmagan yoki majburiy texnik ko’rikdan o'tkazilmagan yoxud foydalanish man etiladigan darajada nosozligi bo'lgan yoki qonun hujjatlarida belgilangan tartibda favqulodda vaziyatda oynani sindirish uchun foydalaniladigan bolg’acha bilan jihozlanmagan, o’t o'chirgich, tibbiyot qutichasi, avariya holatida to’xtaganligini bildiruvchi belgi va nur qaytargichli kamzul bilan butlanmagan, xuddi shuningdek ishlayotganida tashqariga chigarayotgan ifloslantiruvchi moddalarning miqdori, shuningdek shovgain darajasi belgilangan normalardan ortiq bo‘lgan transport vositalarini boshgarishi''',
+    cost: 135000,
+  )
 ];

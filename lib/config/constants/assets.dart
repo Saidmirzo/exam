@@ -105,4 +105,9 @@ class _Images extends _AssetsHolder {
   String get sign5 => '$basePath/sign5.png';
 
   String get sign6 => '$basePath/sign6.png';
+
+  //!
+  String get appLogo => '$basePath/app_logo.svg';
+
+  String get avtomentorText => '$basePath/avtomentor_text.svg';
 }

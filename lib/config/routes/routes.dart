@@ -1,6 +1,8 @@
 import 'package:exam/features/categories/precentation/pages/categories_page.dart';
+import 'package:exam/features/fines/presentation/pages/fines_page.dart';
 import 'package:exam/features/news/presentation/pages/news_more_info_page.dart';
 import 'package:exam/features/news/presentation/pages/news_page.dart';
+import 'package:exam/features/onboarding/presentation/pages/onboarding_page.dart';
 import 'package:exam/features/others/presentation/pages/others_page.dart';
 import 'package:exam/features/road_sings/presentation/pages/road_signs_info_page.dart';
 import 'package:exam/features/road_sings/presentation/pages/road_signs_page.dart';
@@ -20,6 +22,8 @@ class Routes {
   static const statisticsPage = '/statisticsPage';
   static const roadSignsPage = '/roadSignsPage';
   static const roadSignsInfoPage = '/roadSignsInfoPage';
+  static const finesPage = '/finesPage';
+  static const onboardingPage = '/';
 
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
@@ -71,6 +75,16 @@ class Routes {
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const RoadSignsInfoPage(),
+          );
+        case finesPage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const FinesPage(),
+          );
+        case onboardingPage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const OnboardingPage(),
           );
         default:
           return MaterialPageRoute(

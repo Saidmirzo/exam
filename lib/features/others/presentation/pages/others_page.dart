@@ -39,7 +39,7 @@ class OthersPage extends StatelessWidget {
               name: 'Jarimalar ro’yixati',
               icon: Assets.icons.fine,
               iconBgColor: AppColors.blue,
-              onTap: () {},
+              onTap: () => Navigator.pushNamed(context, Routes.finesPage),
             ),
             CategoryItem(
               name: 'Yo’l beilgilari',
