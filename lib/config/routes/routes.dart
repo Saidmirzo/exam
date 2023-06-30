@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 import '../../features/home/presentation/pages/home_page.dart';
 
 class Routes {
+  static const onboardingPage = '/';
   static const homePage = '/homePage';
   static const categoriesPage = '/categoriesPage';
   static const othersPage = '/othersPage';
@@ -23,7 +24,6 @@ class Routes {
   static const roadSignsPage = '/roadSignsPage';
   static const roadSignsInfoPage = '/roadSignsInfoPage';
   static const finesPage = '/finesPage';
-  static const onboardingPage = '/';
 
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {

@@ -20,9 +20,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
   void initState() {
     super.initState();
     Timer.periodic(
-      Duration(seconds: 1),
+      const Duration(seconds: 1),
       (timer) {
-        log('ishlayapti');
         if (timer.tick == 1) {
           Navigator.pushReplacementNamed(context, Routes.homePage);
         } else {

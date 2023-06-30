@@ -34,7 +34,9 @@ class NumberIdicatorItem extends StatelessWidget {
             style: AppTextStyles.body16w5.copyWith(
               color: indicatorState == IndicatorState.inFuture
                   ? AppColors.grey4
-                  : AppColors.white,
+                  : indicatorState == IndicatorState.progress
+                      ? AppColors.black
+                      : AppColors.white,
             ),
           ),
         ),

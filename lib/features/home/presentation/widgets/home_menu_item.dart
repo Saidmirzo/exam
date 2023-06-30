@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,7 +9,8 @@ class HomeMenuItem extends StatelessWidget {
     super.key,
     required this.icon,
     required this.name,
-    required this.color, required this.ontap,
+    required this.color,
+    required this.ontap,
   });
   final String icon;
   final String name;
@@ -22,7 +22,7 @@ class HomeMenuItem extends StatelessWidget {
     return InkWell(
       onTap: ontap,
       child: Container(
-        height: 156.h,
+        height: 100, // (442 / 3).h,
         width: 165.w,
         alignment: Alignment.center,
         decoration: BoxDecoration(

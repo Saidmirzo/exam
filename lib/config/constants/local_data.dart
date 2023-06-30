@@ -12,8 +12,10 @@ List<QuetionModel> listQuetions = [
       'Og’ir vaznli va yirik o’lchamdagiyuklarni tashuvchi yo’l,',
       "Uzunligi yuk bilan yoki 20 metrdan ortiq bo’lgan transport vositasi yo’li"
     ],
+    correctAnswer:  'Bo’lak oxiri',
     quetion: "Ushbu yo’l belgisiga to’g’ri tarifni belgilang:",
     image: Assets.images.testPic,
+
   ),
 ];
 

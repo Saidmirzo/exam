@@ -17,6 +17,7 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: WallWidget(
           child: ListView(
+            physics: const NeverScrollableScrollPhysics(),
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -76,7 +77,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.only(top: 23.h, bottom: 12.h),
+                padding: EdgeInsets.only(top: 16.h, bottom: 12.h),
                 child: Text(
                   'Imtihonlar statistikasi',
                   style: AppTextStyles.body12w5.copyWith(
@@ -86,14 +87,15 @@ class HomePage extends StatelessWidget {
               ),
               const StatisticsWidget(),
               Container(
-                height: 550.h,
                 margin: EdgeInsets.only(top: 16.h),
                 child: GridView.builder(
+                  shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 14.w,
                     mainAxisSpacing: 14.h,
+                    childAspectRatio: 1.12,
                   ),
                   itemCount: 6,
                   itemBuilder: (context, index) {
@@ -120,5 +122,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-
